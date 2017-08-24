@@ -1,0 +1,61 @@
+body {
+  margin: 0px;
+  padding: 0px; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+  a a:hover {
+    text-decoration: none; }
+  a a:visited {
+    text-decoration: none; }
+
+#main-content {
+  width: 100vw;
+  eight: 100vh;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  background-color: blue; }
+
+#menu-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  height: 70px;
+  background-color: red; }
+
+.news-container {
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.33); }
+  .news-container .news-overlay {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: -moz-linear-gradient(top, transparent 0%, black 100%);
+    background: -webkit-linear-gradient(top, transparent 0%, black 100%);
+    background: linear-gradient(to bottom, transparent 0%, black 100%); }
+    .news-container .news-overlay .text-overlay {
+      eight: 50%;
+      margin: 0px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      text-transform: capitalize;
+      font-size: 28px;
+      color: #fff; }
+    .news-container .news-overlay .news-source {
+      font-size: 10px;
+      color: pink;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px; }
+
+/*# sourceMappingURL=style.css.map */
