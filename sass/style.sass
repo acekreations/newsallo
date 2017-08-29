@@ -8,7 +8,6 @@ body
   background-color: #9f648f
   margin: 0px
   padding: 0px
-  width: 100vw
   height: 100vh
   background-image: url('../assets/bg.jpg')
   background-size: cover
@@ -32,14 +31,14 @@ a
   color: #CBE2FC
 
 #main-content
-  width: 100vw
   padding-bottom: 70px
   display: flex
   flex-direction: row
   flex-wrap: wrap
   justify-content: center
   align-content: flex-start
-  overflow: scroll
+  overflow-y: hidden
+  overflow-x: hidden
 
 #menu-bar
   width: 100%
@@ -130,7 +129,7 @@ a
   left: 0
   z-index: 100
   opacity: 0
-  overflow: scroll
+  overflow: auto
 
   #news-channels-menu
     display: flex
@@ -178,6 +177,40 @@ a
   padding-left: 90px
   font-size: 12px
   margin-top: 45px
+
+#help
+  height: 0vh
+  width: 100vw
+  background: rgba(0,0,0,0.9)
+  position: fixed
+  bottom: 0
+  left: 0
+  z-index: 100
+  opacity: 0
+
+  p
+    padding-left: 90px
+    max-width: 70vw
+
+  .help-header
+    font-size: 20px
+
+  #help-menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-left: 84px
+    padding-right: 40px
+    font-size: 60px
+
+    p
+      padding-left: 0px
+
+    #close-help
+      cursor: pointer
+
+    p
+      margin: 30px 0px 20px 0px
 
 #loading
   width: 200px

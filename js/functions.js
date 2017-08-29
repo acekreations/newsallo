@@ -79,6 +79,13 @@ $(document).ready(function(){
     $("#news-channels").animate({height: '0vh', opacity: '0'});
   });
 
+  $("#menu-help").click(function(){
+    $("#help").animate({height: '100vh', opacity: '1'});
+  });
+  $("#close-help").click(function(){
+    $("#help").animate({height: '0vh', opacity: '0'});
+  });
+
 });
 
 $(document).on('mouseenter','.news-overlay', function (event) {

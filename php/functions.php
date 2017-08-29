@@ -38,7 +38,21 @@ if(isset($_POST['preferences'])){
       $i++;
     }
   }
+  $google_ad = '<div class="news-container animated fadeIn"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Newsallo 2.0 300x300 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:300px"
+     data-ad-client="ca-pub-9784651090344026"
+     data-ad-slot="1747501372"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>';
+  $news_array[] = $google_ad;
   shuffle($news_array);
+  if (count($news_array) > 6) {
+    $news_array[] = $google_ad;
+    shuffle($news_array);
+  }
   foreach ($news_array as $news) {
     echo $news;
   }

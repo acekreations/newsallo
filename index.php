@@ -60,6 +60,19 @@
       </ul>
       <p id="powered-by"><a href="https://newsapi.org/" target="_blank">Powered by NewsAPI.org</a></p>
     </div>
+    <div id="help">
+      <div id="help-menu">
+        <p>Support</p>
+        <p id="close-help">X</p>
+      </div>
+      <p class="help-header">What is newsallo?</p>
+      <p>Newsallo combines all of your favorite news sources into one beautiful and easy to read feed. What headlines will you be shown? Newsallo inludes the top 5 articles from each of your selected news sources, and updates with the newest articles everytime you load newsallo.com</p>
+      <p class="help-header">F.A.Q.</p>
+      <p><u>Newsallo doesn't remeber my news channels:</u> Newsallo uses cookies to remeber your news channel settings, if for some reason your cookies are deleted or your computer is not set to remember cookies your settings will not be remembered.</p>
+      <p><u>I don't see my favorite news source:</u> There are plans in the near future to add many more news channels! Keep checking back to see what we've added.</p>
+      <p><u>How do I contact Newsallo:</u> You may use the 'Report A Problem' link below to get in-touch with us.</p>
+      <p><u><a href="https://goo.gl/forms/nleEeBboB3enqb5B3" target="_blank">Report A Problem</a></u></p>
+    </div>
 
 
   <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
