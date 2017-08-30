@@ -21,7 +21,25 @@
   </head>
   <body>
     <div id="main-content">
-      <img id="loading" class="animated fadeIn" src="assets/loading.svg"/>
+      <svg id="loading" class="animated fadeIn" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      	 viewBox="0 0 143.7 143.7" style="enable-background:new 0 0 143.7 143.7;" xml:space="preserve">
+      <style type="text/css">
+      	.st0{fill:none;stroke:#D9D9D9;stroke-width:2;}
+      	.st1{fill:none;stroke:#9B9B9B;stroke-width:2;}
+      </style>
+      <circle class="st0" cx="71.8" cy="71.8" r="33.6">
+      <animate  accumulate="none" additive="replace" attributeName="r" begin="-1.2s" calcMode="spline" dur="2.4" fill="remove" keySplines="0 0.2 0.8 1" keyTimes="0;1" repeatCount="indefinite" restart="always" values="0;40">
+      	</animate>
+      <animate  accumulate="none" additive="replace" attributeName="opacity" begin="-1.2s" calcMode="spline" dur="2.4" fill="remove" keySplines="0.2 0 0.8 1" keyTimes="0;1" repeatCount="indefinite" restart="always" values="1;0">
+      	</animate>
+      </circle>
+      <circle class="st1" cx="71.8" cy="71.8" r="70.8">
+      <animate  accumulate="none" additive="replace" attributeName="r" begin="0s" calcMode="spline" dur="2.4" fill="remove" keySplines="0 0.2 0.8 1" keyTimes="0;1" repeatCount="indefinite" restart="always" values="0;40">
+      	</animate>
+      <animate  accumulate="none" additive="replace" attributeName="opacity" begin="0s" calcMode="spline" dur="2.4" fill="remove" keySplines="0.2 0 0.8 1" keyTimes="0;1" repeatCount="indefinite" restart="always" values="1;0">
+      	</animate>
+      </circle>
+      </svg>
     </div>
     <div id="menu-bar">
       <div id="menu-hamburger">
