@@ -60,6 +60,11 @@ a {
     cursor: pointer;
     opacity: 0.9; }
 
+.ad-container {
+  width: 300px;
+  height: 300px;
+  margin: 20px; }
+
 .news-container {
   width: 300px;
   height: 300px;
@@ -117,6 +122,9 @@ a {
     padding-left: 84px;
     padding-right: 40px;
     font-size: 60px; }
+    #news-channels #news-channels-menu h1 {
+      font-size: 60px;
+      font-weight: 100; }
     #news-channels #news-channels-menu #close-news-channels {
       cursor: pointer; }
     #news-channels #news-channels-menu p {

@@ -2,11 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Newsallo - All Of Your News On One Page</title>
+    <meta name="description" content="Newsallo combines all of your favorite news sources into one beautiful and easy to read news feed." />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
     <link rel="stylesheet" href="css/fa/scss/font-awesome.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93301700-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-93301700-1');
+    </script>
   </head>
   <body>
     <div id="main-content">
@@ -29,7 +40,7 @@
     </div>
     <div id="news-channels">
       <div id="news-channels-menu">
-        <p>News Channels</p>
+        <h1>News Channels</h1>
         <p id="close-news-channels">X</p>
       </div>
       <ul id="channels">

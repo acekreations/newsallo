@@ -38,7 +38,7 @@ if(isset($_POST['preferences'])){
       $i++;
     }
   }
-  $google_ad = '<div class="news-container animated fadeIn"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  $google_ad = '<div class="ad-container animated fadeIn"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Newsallo 2.0 300x300 -->
 <ins class="adsbygoogle"
      style="display:inline-block;width:300px;height:300px"
