@@ -1,8 +1,5 @@
 $(document).ready(function(){
 
-  //Cookies.set('preferences', "test array", { expires: 1 });
-  //Cookies.remove('preferences');
-
   $('#channels li').attr("data-checked", "unchecked");
   $('#channels li').prepend('<i class="fa fa-square-o" aria-hidden="true"></i>');
 
@@ -33,6 +30,10 @@ $(document).ready(function(){
           preferences: preferences
       },
       function(data, status){
+        var divs = $(data).filter("div");
+        if (divs.length < 2) {
+          $("#news-channels").animate({height: '100vh', opacity: '1'});
+        }
         $('#main-content').html(data);
       });
     }

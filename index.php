@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Newsallo - All Of Your News On One Page</title>
     <meta name="description" content="Newsallo combines all of your favorite news sources into one beautiful and easy to read news feed." />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
