@@ -23,6 +23,12 @@ a {
 .fa {
   color: #CBE2FC; }
 
+#time {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  font-size: 11px; }
+
 #main-content {
   width: 100%;
   padding-bottom: 70px;
@@ -105,6 +111,9 @@ a {
       .news-container .news-overlay .text-overlay-description br {
         line-height: 2; }
 
+@media only screen and (max-width: 680px) {
+  .news-container:first-of-type {
+    margin-top: 4px; } }
 #news-channels {
   height: 0vh;
   width: 100vw;
@@ -125,6 +134,9 @@ a {
     #news-channels #news-channels-menu h1 {
       font-size: 60px;
       font-weight: 100; }
+      @media only screen and (max-width: 680px) {
+        #news-channels #news-channels-menu h1 {
+          margin-left: -64px; } }
     #news-channels #news-channels-menu #close-news-channels {
       cursor: pointer; }
     #news-channels #news-channels-menu p {
@@ -166,10 +178,14 @@ a {
   bottom: 0;
   left: 0;
   z-index: 100;
-  opacity: 0; }
+  opacity: 0;
+  overflow: auto; }
   #help p {
     padding-left: 90px;
     max-width: 70vw; }
+    @media only screen and (max-width: 680px) {
+      #help p {
+        padding-left: 50px; } }
   #help .help-header {
     font-size: 20px; }
   #help #help-menu {
@@ -179,6 +195,9 @@ a {
     padding-left: 84px;
     padding-right: 40px;
     font-size: 60px; }
+    @media only screen and (max-width: 680px) {
+      #help #help-menu {
+        padding-left: 50px; } }
     #help #help-menu p {
       padding-left: 0px; }
     #help #help-menu #close-help {

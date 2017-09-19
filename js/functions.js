@@ -35,6 +35,10 @@ $(document).ready(function(){
           $("#news-channels").animate({height: '100vh', opacity: '1'});
         }
         $('#main-content').html(data);
+        var numArticles = $('.news-container').length;
+        time = moment().format('MMM Do YYYY, h:mm A');
+        time = "<p>" + numArticles + " Headlines Updated: " + time + "</p>";
+        $('#time').html(time);
       });
     }
   }

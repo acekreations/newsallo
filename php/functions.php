@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 if(isset($_POST['preferences'])){
   $preferences = $_POST['preferences'];
@@ -25,7 +28,7 @@ if(isset($_POST['preferences'])){
       $add_news = '<div class="news-container animated fadeIn" style="background-image: url(\'' . $v['urlToImage'] . '\'); background-size:cover; background-position:center;">
         <a class="news-overlay" href="' . $v['url'] . '" target="_blank">
             <p class="text-overlay">' . $v['title'] . '<br><small>' . $source . '</small></p>
-            <p class="text-overlay-description">' . $v['description'] . '<br><small>' . $source . '</small></p>
+            <p class="text-overlay-description">' . $v['description'] . '<br><small>' . $source . ' - Click To Read</small></p>
         </a>
       </div>';
       $news_array[] = $add_news;
@@ -44,11 +47,17 @@ if(isset($_POST['preferences'])){
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script></div>';
+  $count = count($news_array);
+  $rand = rand(0, $count);
+  $first_value = array_slice($news_array, $rand--, $rand);
   $news_array[] = $google_ad;
   shuffle($news_array);
   if (count($news_array) > 6) {
     $news_array[] = $google_ad;
     shuffle($news_array);
+    $news_array = array_merge($first_value, $news_array);
+  }else {
+    $news_array = array_merge($first_value, $news_array);
   }
   foreach ($news_array as $news) {
     echo $news;
