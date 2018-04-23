@@ -25,10 +25,18 @@ if(isset($_POST['preferences'])){
     $source = str_replace("-", " ", $source);
     $i = 0;
     foreach ($data['articles'] as $v) {
+      $title = $v['title'];
+      if (strlen($title) > 56) {
+          $title = substr($title, 0, 56) . "...";
+      }
+      $description = $v['description'];
+      if (strlen($description) > 300) {
+          $description = substr($description, 0, 300) . "...";
+      }
       $add_news = '<div class="news-container animated fadeIn" style="background-image: url(\'' . $v['urlToImage'] . '\'); background-size:cover; background-position:center;">
         <a class="news-overlay" href="' . $v['url'] . '" target="_blank">
-            <p class="text-overlay">' . $v['title'] . '<br><small>' . $source . '</small></p>
-            <p class="text-overlay-description">' . $v['description'] . '<br><small>' . $source . ' - Click To Read</small></p>
+            <p class="text-overlay">' . $title . '<br><small>' . $source . '</small></p>
+            <p class="text-overlay-description">' . $description . '<br><small>' . $source . ' - Click To Read</small></p>
         </a>
       </div>';
       $news_array[] = $add_news;
@@ -50,15 +58,15 @@ if(isset($_POST['preferences'])){
   $count = count($news_array);
   $rand = rand(0, $count);
   $first_value = array_slice($news_array, $rand--, $rand);
-  $news_array[] = $google_ad;
+  //$news_array[] = $google_ad;
   shuffle($news_array);
-  if (count($news_array) > 6) {
+  /*if (count($news_array) > 6) {
     $news_array[] = $google_ad;
     shuffle($news_array);
     $news_array = array_merge($first_value, $news_array);
   }else {
     $news_array = array_merge($first_value, $news_array);
-  }
+  }*/
   foreach ($news_array as $news) {
     echo $news;
   }

@@ -85,9 +85,9 @@ a {
     overflow: hidden;
     border-radius: 15px;
     transition: all 0.3s;
-    background: -moz-linear-gradient(top, transparent 0%, black 100%);
-    background: -webkit-linear-gradient(top, transparent 0%, black 100%);
-    background: linear-gradient(to bottom, transparent 0%, black 100%); }
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%); }
     .news-container .news-overlay small {
       font-size: 11px;
       text-transform: capitalize; }
