@@ -4,9 +4,9 @@ import axios from "axios";
 
 class App extends Component {
     componentDidMount() {
-        axios.get("/hello").then(function(res) {
-            console.log(res);
-        });
+        // axios.get("/hello").then(function(res) {
+        //     console.log(res);
+        // });
     }
 
     render() {
