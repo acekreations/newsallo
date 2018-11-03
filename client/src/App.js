@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
+import Home from "./components/Home";
 
 class App extends Component {
     componentDidMount() {
@@ -11,9 +13,13 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <h1>Hello there</h1>
-            </div>
+            <Router>
+                <div>
+                    <Switch>
+                        <Route path="/" component={Home} />
+                    </Switch>
+                </div>
+            </Router>
         );
     }
 }
