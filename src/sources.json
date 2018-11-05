@@ -1,0 +1,132 @@
+{
+    "data": [
+        {
+            "id": "abc-news",
+            "name": "ABC News"
+        },
+        {
+            "id": "al-jazeera-english",
+            "name": "Al Jazeera"
+        },
+        {
+            "id": "associated-press",
+            "name": "Associated Press"
+        },
+        {
+            "id": "bbc-new",
+            "name": "BBC News"
+        },
+        {
+            "id": "bbc-sport",
+            "name": "BBC Sport"
+        },
+        {
+            "id": "bleacher-report",
+            "name": "Bleacher Report"
+        },
+        {
+            "id": "bloomberg",
+            "name": "Bloomberg"
+        },
+        {
+            "id": "business-insider",
+            "name": "Business Insider"
+        },
+        {
+            "id": "cbs-news",
+            "name": "CBS News"
+        },
+        {
+            "id": "cnbc",
+            "name": "CNBC"
+        },
+        {
+            "id": "cnn",
+            "name": "CNN"
+        },
+        {
+            "id": "espn",
+            "name": "ESPN"
+        },
+        {
+            "id": "fox-news",
+            "name": "Fox News"
+        },
+        {
+            "id": "fox-sports",
+            "name": "Fox Sports"
+        },
+        {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        {
+            "id": "medical-news-today",
+            "name": "Medical News Today"
+        },
+        {
+            "id": "msnbc",
+            "name": "MSNBC"
+        },
+        {
+            "id": "national-geographic",
+            "name": "National Geographic"
+        },
+        {
+            "id": "nbc-news",
+            "name": "NBC News"
+        },
+        {
+            "id": "new-york-magazine",
+            "name": "New York Magazine"
+        },
+        {
+            "id": "nfl-news",
+            "name": "NFL News"
+        },
+        {
+            "id": "nhl-news",
+            "name": "NHL News"
+        },
+        {
+            "id": "reddit-r-all",
+            "name": "reddit"
+        },
+        {
+            "id": "reuters",
+            "name": "Reuters"
+        },
+        {
+            "id": "techcrunch",
+            "name": "TechCrunch"
+        },
+        {
+            "id": "the-guardian-uk",
+            "name": "The Guardian"
+        },
+        {
+            "id": "the-new-york-times",
+            "name": "The New York Times"
+        },
+        {
+            "id": "the-wall-street-journal",
+            "name": "The Wall Street Journal"
+        },
+        {
+            "id": "the-washington-post",
+            "name": "The Washington Post"
+        },
+        {
+            "id": "time",
+            "name": "Time"
+        },
+        {
+            "id": "usa-today",
+            "name": "USA Today"
+        },
+        {
+            "id": "vice-news",
+            "name": "Vice News"
+        }
+    ]
+}
