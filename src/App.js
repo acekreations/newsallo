@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Create from "./pages/Create";
+import Settings from "./pages/Settings";
 
 class App extends Component {
     render() {
@@ -26,6 +27,7 @@ class App extends Component {
                             }
                         />
                         <Route exact path="/create" component={Create} />
+                        <Route exact path="/settings" component={Settings} />
                     </Switch>
                 </div>
             </Router>

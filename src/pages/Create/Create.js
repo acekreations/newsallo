@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { BrowserRouter as Redirect } from "react-router-dom";
-import sourcesFile from "../../sources.json";
+import { BrowserRouter as Router, Redirect } from "react-router-dom";
+import SourceSelector from "../../components/SourceSelector";
 
 class Create extends Component {
     state = {
-        sources: sourcesFile.data,
         redirectHome: false
     };
 
@@ -31,31 +30,6 @@ class Create extends Component {
         }
     };
 
-    handleSourceClick = sourceIndex => {
-        //when a source is clicked find the array item in state and add a 'selected: true' pair to the object
-        // set to false if the 'selected: true' already exists
-        let newSources = this.state.sources;
-        if (newSources[sourceIndex].selected) {
-            newSources[sourceIndex].selected = false;
-        } else {
-            newSources[sourceIndex].selected = true;
-        }
-        this.setState({
-            sources: newSources
-        });
-    };
-
-    handleSave = () => {
-        let sourceSelection = [];
-        this.state.sources.map(
-            source => source.selected && sourceSelection.push(source.id)
-        );
-        localStorage.setItem("sources", sourceSelection.join(","));
-        this.setState({
-            redirectHome: true
-        });
-    };
-
     render() {
         //check if redirectHome is set to true, if so redirect home
         if (this.state.redirectHome === true) {
@@ -63,20 +37,8 @@ class Create extends Component {
         }
         return (
             <div>
-                <ul>
-                    {this.state.sources.map((source, index) => (
-                        <li
-                            key={index}
-                            onClick={() => this.handleSourceClick(index)}
-                        >
-                            <p>
-                                {source.name}
-                                {source.selected && " X"}
-                            </p>
-                        </li>
-                    ))}
-                </ul>
-                <button onClick={this.handleSave}>Save</button>
+                <h1>Welcome</h1>
+                <SourceSelector />
             </div>
         );
     }
