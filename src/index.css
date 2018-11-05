@@ -1,4 +1,120 @@
+body {
+  background-color: #1E1E2D;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px; }
+
+h1 {
+  color: #fff;
+  font-size: 25px;
+  margin: 0px; }
+
+a {
+  color: #fff;
+  transition: all 0.2s; }
+  a:hover {
+    color: rgba(255, 255, 255, 0.6); }
+
+hr {
+  border-top: 0px solid #000;
+  border-color: #2B3553;
+  border-style: solid; }
+
 li {
   list-style-type: none; }
+
+.loading {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 40px;
+  margin: 0;
+  display: block;
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+#pageContainer {
+  margin-top: 80px;
+  width: 100vw; }
+
+#navBar {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  background: #ff8d72;
+  background: -moz-linear-gradient(-45deg, #ff8d72 25%, #ff6491 100%);
+  background: -webkit-linear-gradient(-45deg, #ff8d72 25%, #ff6491 100%);
+  background: linear-gradient(135deg, #ff8d72 25%, #ff6491 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8d72', endColorstr='#ff6491',GradientType=1 ); }
+  #navBar #logoContainer {
+    width: 160px;
+    background-color: #27293B;
+    -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    display: flex;
+    align-items: center; }
+    #navBar #logoContainer #logo {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-size: 29px;
+      padding-left: 10px;
+      margin: 0px;
+      text-align: center; }
+  #navBar #menuContainer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 25px; }
+
+.newsContainer {
+  padding: 0px 25px 0px 25px; }
+
+.card {
+  max-width: 700px;
+  height: calc(100% - 40px);
+  background-color: #27293B;
+  border-radius: 8px;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 0px 12px 12px 12px; }
+  .card hr {
+    margin: 10px 0px 10px 0px; }
+  .card p {
+    margin: 0px; }
+  .card .cardImg {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: calc(100% + 24px);
+    height: 163px;
+    background-size: cover;
+    background-position: center;
+    margin-left: -12px;
+    margin-right: -12px; }
+    .card .cardImg .cardImgOverlay {
+      width: 100%;
+      height: 100%;
+      background: -moz-linear-gradient(top, rgba(39, 41, 59, 0) 0%, #27293b 100%);
+      background: -webkit-linear-gradient(top, rgba(39, 41, 59, 0) 0%, #27293b 100%);
+      background: linear-gradient(to bottom, rgba(39, 41, 59, 0) 0%, #27293b 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0027293b', endColorstr='#27293b',GradientType=0 ); }
+  .card .cardTitle {
+    margin-top: -40px; }
+  .card .cardExtLink {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 15px; }
+  .card .cardMeta {
+    display: flex;
+    justify-content: space-between; }
 
 /*# sourceMappingURL=index.css.map */

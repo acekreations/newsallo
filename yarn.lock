@@ -6087,6 +6087,11 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
   dependencies:
     minimist "0.0.8"
 
+moment@^2.22.2:
+  version "2.22.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
+  integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -7750,6 +7755,11 @@ react-error-overlay@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.0.tgz#c516995a5652e7bfbed8b497910d5280df74a7e8"
   integrity sha512-akMy/BQT5m1J3iJIHkSb4qycq2wzllWsmmolaaFVnb+LPV9cIJ/nTud40ZsiiT0H3P+/wXIdbjx2fzF61OaeOQ==
+
+react-moment@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-0.8.3.tgz#68b5add7145c736b8a737d55c4ed31fbcbcfe1eb"
+  integrity sha512-9wFd3tS44D5NPjuDUGv7qinXKIE50wy2TsOJEUn3pNVO2z7edc1hsjKF5Ol2w7I7qmWd3X1h52/y5H/Ufi7xIA==
 
 react-router-dom@^4.3.1:
   version "4.3.1"

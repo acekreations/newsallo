@@ -5,6 +5,7 @@ class Settings extends Component {
     render() {
         return (
             <div>
+                {this.props.children}
                 <h1>Settings</h1>
                 <SourceSelector />
             </div>

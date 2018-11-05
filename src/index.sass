@@ -1,2 +1,146 @@
+//colors
+$light: #fff
+$lightAcc: rgba(255,255,255,0.6)
+$mid: #27293B
+$midAcc: #2B3553
+$dark: #1E1E2D
+//Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff8d72+0,ff6491+100
+// background: rgb(255,141,114)
+// background: -moz-linear-gradient(-45deg, rgba(255,141,114,1) 0%, rgba(255,100,145,1) 100%)
+// background: -webkit-linear-gradient(-45deg, rgba(255,141,114,1) 0%,rgba(255,100,145,1) 100%)
+// background: linear-gradient(135deg, rgba(255,141,114,1) 0%,rgba(255,100,145,1) 100%)
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8d72', endColorstr='#ff6491',GradientType=1 )
+
+//font family
+$ffMain: 'Roboto Mono', monospace
+$ffLogo: 'Roboto', sans-serif
+//font weights
+$fwTitle: 700
+//font size
+$fsTitle: 25px
+$fsMain: 12px
+
+//shadows
+$shadow1: 0px 1px 20px rgba(0,0,0,0.1)
+
+body
+    background-color: $dark
+    color: $lightAcc
+    font-family: $ffMain
+    font-size: $fsMain
+
+h1
+    color: $light
+    font-size: $fsTitle
+    margin: 0px
+
+a 
+    color: $light
+    transition: all 0.2s
+    &:hover
+        color: $lightAcc
+
+hr  
+    border-top: 0px solid #000
+    border-color: $midAcc
+    border-style: solid
+    
 li
     list-style-type: none
+
+.loading
+    text-align: center
+    color: $lightAcc
+    font-size: 40px
+    margin: 0
+    display: block
+    animation-name: rotate 
+    animation-duration: 1.5s 
+    animation-iteration-count: infinite
+    animation-timing-function: ease-in-out
+
+    @keyframes rotate
+        0%
+            transform: rotate(0deg)
+        100%
+            transform: rotate(360deg)
+
+#pageContainer
+    margin-top: 80px
+    width: 100vw
+
+#navBar
+    width: 100%
+    height: 60px
+    position: fixed
+    top: 0
+    left: 0
+    box-shadow: $shadow1
+    display: flex
+    justify-content: space-between
+    background: rgb(255,141,114)
+    background: -moz-linear-gradient(-45deg, rgba(255,141,114,1) 25%, rgba(255,100,145,1) 100%)
+    background: -webkit-linear-gradient(-45deg, rgba(255,141,114,1) 25%,rgba(255,100,145,1) 100%)
+    background: linear-gradient(135deg, rgba(255,141,114,1) 25%,rgba(255,100,145,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8d72', endColorstr='#ff6491',GradientType=1 )
+    #logoContainer
+        width: 160px
+        background-color: $mid
+        -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%)
+        clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%)
+        display: flex
+        align-items: center
+        #logo
+            font-family: $ffLogo
+            font-weight: 300
+            font-size: 29px
+            padding-left: 10px
+            margin: 0px
+            text-align: center
+    #menuContainer
+        padding: 10px
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        font-size: $fsTitle
+
+.newsContainer
+    padding: 0px 25px 0px 25px
+
+.card
+    max-width: 700px
+    height: calc(100% - 40px)
+    background-color: $mid
+    border-radius: 8px
+    box-shadow: $shadow1
+    margin-bottom: 30px
+    padding: 0px 12px 12px 12px
+    hr
+        margin: 10px 0px 10px 0px
+    p 
+        margin: 0px
+    .cardImg
+        border-top-left-radius: 8px
+        border-top-right-radius: 8px
+        width: calc(100% + 24px)
+        height: 163px
+        background-size: cover
+        background-position: center
+        margin-left: -12px
+        margin-right: -12px
+        .cardImgOverlay
+            width: 100%
+            height: 100%
+            //Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#27293b+0,27293b+100&0+0,1+100
+            background: -moz-linear-gradient(top, rgba(39,41,59,0) 0%, rgba(39,41,59,1) 100%)
+            background: -webkit-linear-gradient(top, rgba(39,41,59,0) 0%,rgba(39,41,59,1) 100%)
+            background: linear-gradient(to bottom, rgba(39,41,59,0) 0%,rgba(39,41,59,1) 100%)
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0027293b', endColorstr='#27293b',GradientType=0 )
+    .cardTitle
+        margin-top: -40px
+    .cardExtLink
+        color: $lightAcc
+        font-size: 15px
+    .cardMeta
+        display: flex
+        justify-content: space-between

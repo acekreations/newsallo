@@ -8,26 +8,45 @@ import {
 import Home from "./pages/Home";
 import Create from "./pages/Create";
 import Settings from "./pages/Settings";
+import NavBar from "./components/NavBar";
 
 class App extends Component {
     render() {
         return (
             <Router>
-                <div>
+                <div id="pageContainer">
                     <Switch>
                         <Route
                             exact
                             path="/"
                             render={() =>
                                 localStorage.getItem("userID") ? (
-                                    <Home />
+                                    <Home>
+                                        <NavBar />
+                                    </Home>
                                 ) : (
                                     <Redirect to="/create" />
                                 )
                             }
                         />
-                        <Route exact path="/create" component={Create} />
-                        <Route exact path="/settings" component={Settings} />
+                        <Route
+                            exact
+                            path="/create"
+                            render={() => (
+                                <Create>
+                                    <NavBar />
+                                </Create>
+                            )}
+                        />
+                        <Route
+                            exact
+                            path="/settings"
+                            render={() => (
+                                <Settings>
+                                    <NavBar />
+                                </Settings>
+                            )}
+                        />
                     </Switch>
                 </div>
             </Router>

@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import Card from "../../components/Card";
 
 class Home extends Component {
     state = {};
 
     componentDidMount() {
         const thisComp = this;
-        API.getUserNews(localStorage.getItem("sources")).then(function(res) {
+        API.getUserNews(localStorage.getItem("sources"), 1).then(function(res) {
             thisComp.setState({
                 news: res.data
             });
@@ -15,10 +16,15 @@ class Home extends Component {
     render() {
         return (
             <div>
+                {this.props.children}
                 {this.state.news ? (
-                    this.state.news.map(article => <h3>{article.title}</h3>)
+                    <div className="newsContainer">
+                        <Card news={this.state.news} />
+                    </div>
                 ) : (
-                    <h3>Loading</h3>
+                    <div>
+                        <i className="loading fas fa-spinner" />
+                    </div>
                 )}
             </div>
         );
