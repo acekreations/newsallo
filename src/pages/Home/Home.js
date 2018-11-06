@@ -7,12 +7,34 @@ class Home extends Component {
 
     componentDidMount() {
         const thisComp = this;
-        API.getUserNews(localStorage.getItem("sources"), 1).then(function(res) {
+        API.getUserNews(localStorage.getItem("sources"), 5).then(function(res) {
+            const shuffled = thisComp.shuffle(res.data);
             thisComp.setState({
-                news: res.data
+                news: shuffled
             });
         });
     }
+
+    shuffle = array => {
+        var currentIndex = array.length,
+            temporaryValue,
+            randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    };
+
     render() {
         return (
             <div>

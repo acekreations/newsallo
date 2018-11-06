@@ -6,7 +6,7 @@ class Card extends Component {
         return (
             <div>
                 {this.props.news.map((article, index) => (
-                    <div className="card" key={index}>
+                    <div className="card animated fadeIn" key={index}>
                         <div
                             className="cardImg"
                             style={{
@@ -30,12 +30,12 @@ class Card extends Component {
                         <p>{article.description}</p>
                         <hr />
                         <div className="cardMeta">
+                            <p>{article.sourceName}</p>
                             <p>
                                 <Moment format="MMM DD, YYYY">
                                     {article.publishedAt}
                                 </Moment>
                             </p>
-                            <p>{article.sourceName}</p>
                         </div>
                     </div>
                 ))}

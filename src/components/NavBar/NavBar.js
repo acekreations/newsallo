@@ -6,7 +6,9 @@ class NavBar extends Component {
         return (
             <div id="navBar">
                 <div id="logoContainer">
-                    <h1 id="logo">newsallo</h1>
+                    <Link to="/">
+                        <h1 id="logo">newsallo</h1>
+                    </Link>
                 </div>
                 <div id="menuContainer">
                     <Link to="/settings">
