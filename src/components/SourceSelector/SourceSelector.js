@@ -59,6 +59,12 @@ class SourceSelector extends Component {
         });
     };
 
+    handleBackHome = () => {
+        this.setState({
+            redirectHome: true
+        });
+    };
+
     render() {
         //check if redirectHome is set to true, if so redirect home
         if (this.state.redirectHome === true) {
@@ -66,20 +72,27 @@ class SourceSelector extends Component {
         }
         return (
             <div>
-                <ul>
+                <div className="sourceSelectorContainer">
                     {this.state.sources.map((source, index) => (
-                        <li
+                        <button
+                            className={
+                                source.selected ? "pillBtn" : "pillBtn disabled"
+                            }
                             key={index}
                             onClick={() => this.handleSourceClick(index)}
                         >
-                            <p>
-                                {source.name}
-                                {source.selected && " X"}
-                            </p>
-                        </li>
+                            {source.name}
+                            {/* {source.selected && <i className="fas fa-check" />} */}
+                        </button>
                     ))}
-                </ul>
-                <button onClick={this.handleSave}>Save</button>
+                </div>
+                <hr />
+                <button className="pillBtn" onClick={this.handleSave}>
+                    <i className="fas fa-save" /> Save
+                </button>
+                <button className="pillBtn" onClick={this.handleBackHome}>
+                    <i className="fas fa-home" /> Home
+                </button>
             </div>
         );
     }

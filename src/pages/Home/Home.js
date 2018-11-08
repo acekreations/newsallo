@@ -7,7 +7,9 @@ class Home extends Component {
 
     componentDidMount() {
         const thisComp = this;
-        API.getUserNews(localStorage.getItem("sources"), 5).then(function(res) {
+        API.getUserNews(localStorage.getItem("sources"), 25).then(function(
+            res
+        ) {
             const shuffled = thisComp.shuffle(res.data);
             thisComp.setState({
                 news: shuffled
@@ -40,8 +42,17 @@ class Home extends Component {
             <div>
                 {this.props.children}
                 {this.state.news ? (
-                    <div className="newsContainer">
+                    <div className="mainContainer">
                         <Card news={this.state.news} />
+                        <div className="text-center">
+                            <p>
+                                That's all for now, come back in a few hours for
+                                more news.
+                            </p>
+                            <hr />
+                            <h1 className="ffLogo lightAcc">newsallo</h1>
+                            <hr />
+                        </div>
                     </div>
                 ) : (
                     <div>

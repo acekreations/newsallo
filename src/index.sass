@@ -23,6 +23,15 @@ $fsMain: 12px
 //shadows
 $shadow1: 0px 1px 20px rgba(0,0,0,0.1)
 
+.ffLogo
+    font-family: $ffLogo
+
+.lightAcc
+    color: $lightAcc
+
+.text-center
+    text-align: center
+
 body
     background-color: $dark
     color: $lightAcc
@@ -103,12 +112,13 @@ li
             text-align: center
     #menuContainer
         padding: 10px
+        padding-right: 15px
         display: flex
         align-items: center
         justify-content: flex-end
         font-size: $fsTitle
 
-.newsContainer
+.mainContainer
     max-width: 700px
     padding: 0px 25px 0px 25px
     margin-left: auto
@@ -155,3 +165,26 @@ li
     .cardMeta
         display: flex
         justify-content: space-between
+
+.sourceSelectorContainer
+    display: flex
+    flex-wrap: wrap
+
+.pillBtn
+    border-radius: 100px
+    background-color: $mid
+    color: $lightAcc
+    box-shadow: $shadow1
+    border: none
+    margin: 12px 15px 12px 0px
+    font-size: 16px
+    padding: 5px 12px
+    transition: all 0.3s
+    cursor: pointer
+    &:hover
+        opacity: 0.8
+    i 
+        margin: 0px 2px
+
+.disabled
+    opacity: 0.4
