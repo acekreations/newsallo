@@ -1,44 +1,94 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Newsallo v2
 
-## Available Scripts
+Newsallo is platform that brings all of your favorite news sources into one beautiful and easy to read feed.
 
-In the project directory, you can run:
+# Links
 
-### `npm start`
+[Newsallo v2](https://v2.newsallo.com)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Newsallo v2 API](https://github.com/acekreations/newsallo-api) - for the sake of simplicity the API will be covered in this README as well as the newsallo-api repo.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+# Concept/Idea
 
-### `npm test`
+Newsallo is meant to be a place where you can gather all of you favorite news sources into one place instead of bouncing around to all your different news sites or apps. The idea came out of an increasing need for trustworthy news. The problem is not necessarily that news outlets have become untrustworthy, but the places that we find our news are have become plaqued with untrustworthy people pushing their questionable content on you. That's where Newsallo comes in. Newsallo bridges the gap between the publishers and the consumers, and does it in a way that looks and feels simialar to using the social networks that people like to consume their news with.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Front End
 
-### `npm run build`
+-   React
+    -   React Router
+    -   React Moment
+    -   Axios
+-   HTML
+-   Sass
+-   Netlify (Hosting)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Back End (RESTful API)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+-   Node.js
+-   Express
+-   Axios
+-   Moment
+-   Sequelize
+-   Postgres (Database)
+-   Newsapi.org (data source)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## API
 
-### `npm run eject`
+The RESTful api currently has two end poins:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-   `/api/update` to trigger a call to the newsapi.org API and update the latest news in the Newsallo database
+-   `/api/SOURCE-ID/LIMIT` to retrieve news articles stored in the Newsallo database. _SOURCE-ID_ takes a comma seperated list of "source ids" - source ids are slugified versions the news outlets proper name i.e. BBC News -> bbc-news. _Limit_ is optional and refers to the number of articles to return in total.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Database
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The Newsallo database is Postgres, containing one table to store all news articles. The articles table model can be seen below.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+sourceID: {
+    type: DataTypes.STRING,
+    allowNull: false
+},
+sourceName: {
+    type: DataTypes.STRING,
+    allowNull: false
+},
+author: {
+    type: DataTypes.STRING
+},
+title: {
+    type: DataTypes.STRING,
+    allowNull: false
+},
+description: {
+    type: DataTypes.TEXT
+},
+url: {
+    type: DataTypes.STRING,
+    unique: true,
+    allowNull: false
+},
+urlToImage: {
+    type: DataTypes.TEXT
+},
+publishedAt: {
+    type: DataTypes.STRING
+},
+content: {
+    type: DataTypes.TEXT
+}
+```
 
-## Learn More
+# Future
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Future updated to Newsallo will include:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   Social Functionality
+    -   Adding the ability to follow people you _trust_ on the platform, without the ability to see your follower/following count to minimize any sort of negative side effects caused by "influencers"
+-   More precise news feed control
+    -   Allow users to look at sepreate feeds for sports, finance, technology, etc.
+    -   Allow users to only see articles that have not been shown to them before.
+-   Allow users to save or favorite articles for later
+
+# Author
+
+Craig Melville - [Portfolio](https://www.craigsportfolio.com)
