@@ -10,7 +10,7 @@ class Settings extends Component {
                 <h3>
                     Select the news sources you would like to see articles from.
                 </h3>
-                <SourceSelector />
+                <SourceSelector homeBtn={true}/>
             </div>
         );
     }

@@ -22,7 +22,7 @@ class App extends Component {
                             render={() =>
                                 localStorage.getItem("userID") ? (
                                     <Home>
-                                        <NavBar />
+                                        <NavBar settings={true} />
                                     </Home>
                                 ) : (
                                     <Redirect to="/create" />
@@ -34,7 +34,7 @@ class App extends Component {
                             path="/create"
                             render={() => (
                                 <Create>
-                                    <NavBar />
+                                    <NavBar settings={false} />
                                 </Create>
                             )}
                         />
@@ -43,7 +43,7 @@ class App extends Component {
                             path="/settings"
                             render={() => (
                                 <Settings>
-                                    <NavBar />
+                                    <NavBar settings={true} />
                                 </Settings>
                             )}
                         />

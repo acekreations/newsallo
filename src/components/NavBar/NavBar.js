@@ -11,9 +11,11 @@ class NavBar extends Component {
                     </Link>
                 </div>
                 <div id="menuContainer">
-                    <Link to="/settings">
-                        <i className="fas fa-sliders-h" />
-                    </Link>
+		    {this.props.settings &&
+			<Link to="/settings">
+                        	<i className="fas fa-sliders-h" />
+                   	 </Link>
+		    }
                 </div>
             </div>
         );

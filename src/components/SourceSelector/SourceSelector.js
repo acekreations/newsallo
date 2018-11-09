@@ -90,9 +90,12 @@ class SourceSelector extends Component {
                 <button className="pillBtn" onClick={this.handleSave}>
                     <i className="fas fa-save" /> Save
                 </button>
-                <button className="pillBtn" onClick={this.handleBackHome}>
-                    <i className="fas fa-home" /> Home
-                </button>
+		{/* don't show on create page */}
+		{this.props.homeBtn === true && 
+                	<button className="pillBtn" onClick={this.handleBackHome}>
+                    		<i className="fas fa-home" /> Home
+                	</button>
+		}
             </div>
         );
     }

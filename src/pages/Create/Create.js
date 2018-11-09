@@ -36,9 +36,10 @@ class Create extends Component {
             return <Redirect to="/" />;
         }
         return (
-            <div>
+            <div className="mainContainer">
+	    	{this.props.children}
                 <h1>Welcome</h1>
-                <SourceSelector />
+                <SourceSelector homeBtn={false}/>
             </div>
         );
     }
