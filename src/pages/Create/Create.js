@@ -39,6 +39,7 @@ class Create extends Component {
             <div className="mainContainer">
 	    	{this.props.children}
                 <h1>Welcome</h1>
+		<h3>To start please select a few news sources below that you would like to see articles from.</h3>
                 <SourceSelector homeBtn={false}/>
             </div>
         );
