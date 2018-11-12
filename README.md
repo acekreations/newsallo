@@ -1,6 +1,6 @@
 # Newsallo v2
 
-Newsallo is platform that brings all of your favorite news sources into one beautiful and easy to read feed.
+Newsallo is a platform that brings all of your favorite news sources into one beautiful and easy to read feed.
 
 # Links
 
