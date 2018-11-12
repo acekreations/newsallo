@@ -37,7 +37,7 @@ Newsallo is meant to be a place where you can gather all of you favorite news so
 The RESTful api currently has two end poins:
 
 -   `/api/update` to trigger a call to the newsapi.org API and update the latest news in the Newsallo database
--   `/api/SOURCE-ID/LIMIT` to retrieve news articles stored in the Newsallo database. _SOURCE-ID_ takes a comma seperated list of "source ids" - source ids are slugified versions the news outlets proper name i.e. BBC News -> bbc-news. _Limit_ is optional and refers to the number of articles to return in total.
+-   `/api/SOURCE-ID/LIMIT` to retrieve news articles stored in the Newsallo database. _SOURCE-ID_ takes a comma seperated list of "source ids" - source ids are slugified versions of the news outlets proper name i.e. BBC News -> bbc-news. _Limit_ is optional and refers to the number of articles to return in total.
 
 ## Database
 
@@ -80,7 +80,7 @@ content: {
 
 # Future
 
-Future updated to Newsallo will include:
+Future updates to Newsallo will include:
 
 -   Social Functionality
     -   Adding the ability to follow people you _trust_ on the platform, without the ability to see your follower/following count to minimize any sort of negative side effects caused by "influencers"
