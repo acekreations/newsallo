@@ -4,7 +4,7 @@ Newsallo is a platform that brings all of your favorite news sources into one be
 
 # Links
 
-[Newsallo v2](https://v2.newsallo.com)
+[Newsallo v2 - Live Site](https://v2.newsallo.com)
 
 [Newsallo v2 API](https://github.com/acekreations/newsallo-api) - for the sake of simplicity the API will be covered in this README as well as the newsallo-api repo.
 
@@ -31,6 +31,7 @@ Newsallo is meant to be a place where you can gather all of you favorite news so
 -   Sequelize
 -   Postgres (Database)
 -   Newsapi.org (data source)
+-   Heroku (Hosting)
 
 ## API
 
