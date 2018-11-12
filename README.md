@@ -10,7 +10,7 @@ Newsallo is platform that brings all of your favorite news sources into one beau
 
 # Concept/Idea
 
-Newsallo is meant to be a place where you can gather all of you favorite news sources into one place instead of bouncing around to all your different news sites or apps. The idea came out of an increasing need for trustworthy news. The problem is not necessarily that news outlets have become untrustworthy, but the places that we find our news are have become plaqued with untrustworthy people pushing their questionable content on you. That's where Newsallo comes in. Newsallo bridges the gap between the publishers and the consumers, and does it in a way that looks and feels simialar to using the social networks that people like to consume their news with.
+Newsallo is meant to be a place where you can gather all of you favorite news sources into one place instead of bouncing around to all your different news sites or apps. The idea came out of an increasing need for trustworthy news. The problem is not necessarily that news outlets have become untrustworthy, but the places that we find our news have become plagued with untrustworthy people pushing their questionable content on you. That's where Newsallo comes in. Newsallo bridges the gap between the publishers and the consumers, and does it in a way that looks and feels simialar to using the social networks that people like to consume their news with.
 
 # Front End
 
