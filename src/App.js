@@ -6,7 +6,7 @@ import {
     Switch
 } from "react-router-dom";
 import Home from "./pages/Home";
-import Create from "./pages/Create";
+import Landing from "./pages/Landing";
 import Settings from "./pages/Settings";
 import NavBar from "./components/NavBar";
 
@@ -21,22 +21,26 @@ class App extends Component {
                             path="/"
                             render={() =>
                                 localStorage.getItem("userID") ? (
-                                    <Home>
-                                        <NavBar settings={true} />
-                                    </Home>
+                                    <Redirect to="/home" />
                                 ) : (
-                                    <Redirect to="/create" />
+                                    <Landing>
+                                        <NavBar settings={false} />
+                                    </Landing>
                                 )
                             }
                         />
                         <Route
                             exact
-                            path="/create"
-                            render={() => (
-                                <Create>
-                                    <NavBar settings={false} />
-                                </Create>
-                            )}
+                            path="/home"
+                            render={() =>
+                                localStorage.getItem("userID") ? (
+                                    <Home>
+                                        <NavBar settings={true} />
+                                    </Home>
+                                ) : (
+                                    <Redirect to="/" />
+                                )
+                            }
                         />
                         <Route
                             exact

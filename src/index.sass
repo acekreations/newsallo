@@ -19,6 +19,7 @@ $fwTitle: 700
 //font size
 $fsTitle: 25px
 $fsMain: 12px
+$fsMainAtt: 16px
 
 //shadows
 $shadow1: 0px 1px 20px rgba(0,0,0,0.1)
@@ -57,6 +58,44 @@ hr
     
 li
     list-style-type: none
+
+label
+    margin: 10px 0px 4px 0px
+
+input
+    padding: 6px
+    font-size: $fsMainAtt
+    background-color: $dark
+    border: solid 1px $mid
+    border-radius: 4px
+    color: $lightAcc
+    margin-bottom: 10px
+
+button
+    border-radius: 4px
+    border: 0px solid $lightAcc
+    padding: 6px
+    margin-top: 10px
+    margin-bottom: 10px
+    color: $lightAcc
+    font-size: $fsMainAtt
+    cursor: pointer
+    background: rgb(255,141,114)
+    background: -moz-linear-gradient(-45deg, rgba(255,141,114,1) 0%, rgba(255,100,145,1) 100%)
+    background: -webkit-linear-gradient(-45deg, rgba(255,141,114,1) 0%,rgba(255,100,145,1) 100%)
+    background: linear-gradient(135deg, rgba(255,141,114,1) 0%,rgba(255,100,145,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8d72', endColorstr='#ff6491',GradientType=1 )
+
+.centered
+    margin-left: auto
+    margin-right: auto
+
+.helperText
+    font-size: 10px
+    color: $lightAcc
+
+.error
+    color: #fd4825
 
 .loading
     text-align: center
@@ -188,3 +227,4 @@ li
 
 .disabled
     opacity: 0.4
+
