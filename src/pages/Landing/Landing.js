@@ -16,7 +16,8 @@ const inputHeader = {
 class Landing extends Component {
     state = {
         signUpForm: "",
-        errorNotice: true
+        errorNotice: true,
+        loading: false
     };
 
     //put email input into state
@@ -30,7 +31,9 @@ class Landing extends Component {
         //validate email format. display notice if not formatted correctly
         if (patt.test(email)) {
             //api call
-            console.log("true");
+            this.setState({
+                loading: true
+            });
         } else {
             this.setState({
                 errorNotice: "Please enter a valid email address."
@@ -40,8 +43,8 @@ class Landing extends Component {
 
     //allow use of enter key to submit form
     handleFormEnterKey = e => {
-        e.preventDefault();
         if (e.key === "Enter") {
+            e.preventDefault();
             this.handleForm();
         }
     };
@@ -52,32 +55,36 @@ class Landing extends Component {
                 <div style={loginCard} className="card animated centered">
                     <h1 style={inputHeader}>Sign In / Sign Up</h1>
                     <hr />
-                    <form style={oneHundred}>
-                        <div>
-                            {this.state.errorNotice.length && (
-                                <p className="error">
-                                    {this.state.errorNotice}
-                                </p>
-                            )}
-                            <label>Email:</label>
-                            <input
-                                id="signUpInput"
+                    {this.state.loading ? (
+                        <p>Loading</p>
+                    ) : (
+                        <form style={oneHundred}>
+                            <div>
+                                {this.state.errorNotice.length && (
+                                    <p className="error">
+                                        {this.state.errorNotice}
+                                    </p>
+                                )}
+                                <label>Email:</label>
+                                <input
+                                    id="signUpInput"
+                                    style={oneHundred}
+                                    type="email"
+                                    placeholder="jeff@example.com"
+                                    value={this.state.signUpForm}
+                                    onChange={this.handleFormChange.bind(this)}
+                                    onKeyPress={this.handleFormEnterKey}
+                                />
+                            </div>
+                            <button
                                 style={oneHundred}
-                                type="email"
-                                placeholder="jeff@example.com"
-                                value={this.state.signUpForm}
-                                onChange={this.handleFormChange.bind(this)}
-                                onKeyPress={this.handleFormEnterKey}
-                            />
-                        </div>
-                    </form>
-                    <button
-                        style={oneHundred}
-                        type="button"
-                        onClick={this.handleForm}
-                    >
-                        Submit
-                    </button>
+                                type="button"
+                                onClick={this.handleForm}
+                            >
+                                Submit
+                            </button>
+                        </form>
+                    )}
                     <hr />
                     <p className="helperText">
                         When you enter your email address we will send you a
