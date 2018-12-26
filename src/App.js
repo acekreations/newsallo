@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Landing from "./pages/Landing";
 import Settings from "./pages/Settings";
 import NavBar from "./components/NavBar";
+import Login from "./pages/Login";
 
 class App extends Component {
     render() {
@@ -28,6 +29,14 @@ class App extends Component {
                                     </Landing>
                                 )
                             }
+                        />
+                        <Route
+                            path="/login/:authToken"
+                            render={propsObj => (
+                                <Login propsObj={propsObj}>
+                                    <NavBar settings={false} />
+                                </Login>
+                            )}
                         />
                         <Route
                             exact

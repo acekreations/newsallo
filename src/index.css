@@ -20,9 +20,12 @@ h1 {
 
 a {
   color: #fff;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  text-decoration: none; }
   a:hover {
     color: rgba(255, 255, 255, 0.6);
+    text-decoration: none; }
+  a:visited {
     text-decoration: none; }
 
 hr {
@@ -69,18 +72,24 @@ button {
   color: rgba(255, 255, 255, 0.6); }
 
 .error {
-  color: #fd4825; }
+  color: #fd4825;
+  padding-bottom: 10px; }
 
 .loading {
   text-align: center;
   color: rgba(255, 255, 255, 0.6);
   font-size: 40px;
-  margin: 0;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
   display: block;
   animation-name: rotate;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out; }
+  animation-timing-function: ease-in-out;
+  position: fixed;
+  z-index: 1000; }
 @keyframes rotate {
   0% {
     transform: rotate(0deg); }

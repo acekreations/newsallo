@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import Card from "../../components/Card";
+import Loader from "../../components/Loader";
 
 class Home extends Component {
     state = {};
@@ -55,9 +56,7 @@ class Home extends Component {
                         </div>
                     </div>
                 ) : (
-                    <div>
-                        <i className="loading fas fa-spinner" />
-                    </div>
+                    <Loader />
                 )}
             </div>
         );

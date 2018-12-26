@@ -47,8 +47,11 @@ h1
 a 
     color: $light
     transition: all 0.3s
+    text-decoration: none
     &:hover
         color: $lightAcc
+        text-decoration: none
+    &:visited
         text-decoration: none
 
 hr  
@@ -96,17 +99,23 @@ button
 
 .error
     color: #fd4825
+    padding-bottom: 10px
 
 .loading
     text-align: center
     color: $lightAcc
     font-size: 40px
-    margin: 0
+    top: 50%
+    left: 50%
+    margin-top: -20px
+    margin-left: -20px
     display: block
     animation-name: rotate 
     animation-duration: 1.5s 
     animation-iteration-count: infinite
     animation-timing-function: ease-in-out
+    position: fixed
+    z-index: 1000
 
     @keyframes rotate
         0%
