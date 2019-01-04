@@ -4,9 +4,9 @@ Newsallo is a platform that brings all of your favorite news sources into one be
 
 # Links
 
-[Newsallo v2 - Live Site](https://v2.newsallo.com)
+[Newsallo v2 - Live Site](https://www.newsallo.com)
 
-[Newsallo v2 API](https://github.com/acekreations/newsallo-api) - for the sake of simplicity the API will be covered in this README as well as the newsallo-api repo.
+[Newsallo v2 API](https://github.com/acekreations/newsallo-api) - (currently private for security reasons) for the sake of simplicity the API will be covered in this README as well as the newsallo-api repo.
 
 # Concept/Idea
 
