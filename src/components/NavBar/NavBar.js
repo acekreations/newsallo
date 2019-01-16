@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Route, Redirect, Link } from "react-router-dom";
 
 class NavBar extends Component {
     render() {
@@ -11,11 +11,11 @@ class NavBar extends Component {
                     </Link>
                 </div>
                 <div id="menuContainer">
-		    {this.props.settings &&
-			<Link to="/settings">
-                        	<i className="fas fa-sliders-h" />
-                   	 </Link>
-		    }
+                    {this.props.settings && (
+                        <Link to="/settings">
+                            <i className="fas fa-sliders-h" />
+                        </Link>
+                    )}
                 </div>
             </div>
         );

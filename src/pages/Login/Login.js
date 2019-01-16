@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Redirect } from "react-router-dom";
+import { BrowserRouter as Route, Redirect } from "react-router-dom";
 import API from "../../utils/API";
 import Loader from "../../components/Loader";
 import LoginForm from "../../components/LoginForm";
@@ -25,15 +25,12 @@ class Login extends Component {
     login = () => {
         const thisComp = this;
         API.login(this.state.authToken).then(function(res) {
-            console.log(res);
             //successful start of session
             if (res.data.success) {
                 //set session token in local storage
                 localStorage.setItem("sessionToken", res.data.sessionToken);
-                //redirect to home page on success
-                thisComp.setState({
-                    redirectHome: true
-                });
+                //check is session is now valid. Changes state in app.js
+                thisComp.props.checkSession();
                 //session initiation failed either because authToken expired or is an old or unrecognized token
             } else {
                 //display login form with message
@@ -46,9 +43,6 @@ class Login extends Component {
     };
 
     render() {
-        if (this.state.redirectHome === true) {
-            return <Redirect to="/home" />;
-        }
         return (
             <div>
                 {this.props.children}
