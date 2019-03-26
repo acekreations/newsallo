@@ -15,5 +15,6 @@ export default {
     //check authToken that user gets from login email
     login: authToken => axios.get(`${apiURL}/auth/${authToken}`),
     //verify that a user's session is valid
-    checkSession: sessionToken => axios.get(`${apiURL}/session/${sessionToken}`)
+    checkSession: sessionToken =>
+        axios.get(`${apiURL}/auth/session/${sessionToken}`)
 };

@@ -12,10 +12,13 @@ import Settings from "./pages/Settings";
 import NavBar from "./components/NavBar";
 import Login from "./pages/Login";
 import Setup from "./pages/Setup";
+import Loader from "./components/Loader";
 
 class App extends Component {
     state = {
-        session: false
+        session: false,
+        returningUser: false,
+        loading: true
     };
 
     componentWillMount() {
@@ -28,13 +31,20 @@ class App extends Component {
         if (localStorage.getItem("sessionToken")) {
             API.checkSession(localStorage.getItem("sessionToken")).then(
                 function(res) {
-                    if (!res.success) {
+                    console.log(res.data.returningUser);
+                    if (res.data.success) {
                         thisComp.setState({
-                            session: true
+                            session: true,
+                            returningUser: res.data.returningUser,
+                            loading: false
                         });
                     }
                 }
             );
+        } else {
+            thisComp.setState({
+                loading: false
+            });
         }
     };
 
@@ -42,7 +52,10 @@ class App extends Component {
         return (
             <Router>
                 <div id="pageContainer">
-                    {this.state.session === false ? (
+                    {/* show laoder while checking session */}
+                    {this.state.loading ? (
+                        <Loader />
+                    ) : this.state.session === false ? (
                         // UNPROTECTED PAGES
                         <Switch>
                             <Route
@@ -88,7 +101,9 @@ class App extends Component {
                                 exact
                                 path="/home"
                                 render={() => (
-                                    <Home>
+                                    <Home
+                                        returningUser={this.state.returningUser}
+                                    >
                                         <NavBar settings={true} />
                                     </Home>
                                 )}

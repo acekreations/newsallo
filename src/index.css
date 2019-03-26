@@ -1,5 +1,5 @@
 .ffLogo {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Playfair Display", serif; }
 
 .lightAcc {
   color: rgba(255, 255, 255, 0.6); }
@@ -125,7 +125,7 @@ button {
     display: flex;
     align-items: center; }
     #navBar #logoContainer #logo {
-      font-family: "Roboto", sans-serif;
+      font-family: "Playfair Display", serif;
       font-weight: 300;
       font-size: 29px;
       padding-left: 10px;
