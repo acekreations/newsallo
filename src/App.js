@@ -31,7 +31,6 @@ class App extends Component {
         if (localStorage.getItem("sessionToken")) {
             API.checkSession(localStorage.getItem("sessionToken")).then(
                 function(res) {
-                    console.log(res.data.returningUser);
                     if (res.data.success) {
                         thisComp.setState({
                             session: true,

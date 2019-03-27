@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import Loader from "../../components/Loader";
+import SourceSelector from "../../components/SourceSelector";
+import UserSetup from "../../components/UserSetup";
 
 class Home extends Component {
     state = {
         loading: true,
-        returningUser: this.props.returningUser
+        returningUser: this.props.returningUser,
+        UserSetupComplete: false
     };
 
     render() {
@@ -13,7 +16,11 @@ class Home extends Component {
                 {this.props.children}
                 <div className="mainContainer">
                     {/* {this.state.loading && <Loader />} */}
-                    {this.state.returningUser ? <p>returning</p> : <p>new</p>}
+                    {this.state.returningUser ? (
+                        <p>News feed here</p>
+                    ) : (
+                        <UserSetup />
+                    )}
                 </div>
             </div>
         );

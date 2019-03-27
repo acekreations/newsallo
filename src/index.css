@@ -16,7 +16,9 @@ body {
 h1 {
   color: #fff;
   font-size: 25px;
-  margin: 0px; }
+  margin: 0px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700; }
 
 a {
   color: #fff;
@@ -210,5 +212,9 @@ button {
 
 .disabled {
   opacity: 0.4; }
+
+#userSetupForm {
+  display: flex;
+  flex-direction: column; }
 
 /*# sourceMappingURL=index.css.map */
