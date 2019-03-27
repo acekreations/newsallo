@@ -20,6 +20,7 @@ class UserSetup extends Component {
     };
 
     uploadWidget() {
+        const thisComp = this;
         window.cloudinary.openUploadWidget(
             {
                 cloudName: "db2p0tqy6",
@@ -33,7 +34,7 @@ class UserSetup extends Component {
             },
             function(error, result) {
                 if (result.event === "success") {
-                    this.setState({
+                    thisComp.setState({
                         publicID: result.info.public_id
                     });
                 }
@@ -79,9 +80,21 @@ class UserSetup extends Component {
                             onChange={this.handleChange}
                         />
                     </form>
-                    <button onClick={this.uploadWidget.bind(this)}>
+
+                    <button
+                        className="my-3 btnSubtle btnNarrow"
+                        onClick={this.uploadWidget.bind(this)}
+                    >
                         Upload Profile Photo
+                        {this.state.publicID.length > 0 && (
+                            <i className="fas fa-check ml-2" />
+                        )}
                     </button>
+
+                    <button className="my-3">Next</button>
+
+                    <hr />
+
                     <p>*required</p>
                 </div>
             </div>
