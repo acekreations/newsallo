@@ -1,17 +1,52 @@
 import React, { Component } from "react";
+// const uploadWidget = cloudinary.createUploadWidget(
+//     {
+//         cloudName: "db2p0tqy6",
+//         uploadPreset: "tdyhwqdo"
+//     },
+//     (error, result) => {
+//         if (!error && result && result.event === "success") {
+//             console.log("Done! Here is the image info: ", result.info);
+//         }
+//     }
+// );
 
 class UserSetup extends Component {
     state = {
         username: "",
         firstName: "",
-        lastName: ""
+        lastName: "",
+        publicID: ""
     };
+
+    uploadWidget() {
+        window.cloudinary.openUploadWidget(
+            {
+                cloudName: "db2p0tqy6",
+                uploadPreset: "tdyhwqdo",
+                multiple: false,
+                cropping: true,
+                croppingAspectRatio: 1,
+                sources: ["local", "url", "camera"],
+                resourceType: "image",
+                maxFileSize: 5000000
+            },
+            function(error, result) {
+                if (result.event === "success") {
+                    this.setState({
+                        publicID: result.info.public_id
+                    });
+                }
+            }
+        );
+    }
 
     handleChange = event => {
         const name = event.target.name;
         const value = event.target.value;
         this.setState({ [name]: value });
     };
+
     render() {
         return (
             <div>
@@ -44,6 +79,9 @@ class UserSetup extends Component {
                             onChange={this.handleChange}
                         />
                     </form>
+                    <button onClick={this.uploadWidget.bind(this)}>
+                        Upload Profile Photo
+                    </button>
                     <p>*required</p>
                 </div>
             </div>
